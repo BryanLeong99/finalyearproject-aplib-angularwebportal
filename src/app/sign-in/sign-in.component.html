@@ -1,0 +1,60 @@
+<div>
+    <mat-toolbar>
+            <div class="image-container-left">
+                <img src='assets/image/ap-lib.svg' width="80%"/>
+            </div>
+    
+            <div class="image-container-right">
+                <img src='assets/image/apu-wide-logo.png' width="20%"/>
+            </div>
+    </mat-toolbar>
+</div>
+
+<div class="centered alert-box-container">
+    <div class="alert-title">
+        Sign In Account
+    </div>
+    <form #signInForm="ngForm" (ngSubmit)="onSubmit(signInForm)">
+        <div class="input-label">
+            USERNAME/TP NUMBER
+        </div>
+        <div class="input-field">
+            
+            <mat-form-field>
+                <mat-icon>person_rounded</mat-icon>
+                <!-- <mat-label>dsds</mat-label> -->
+                <input matInput type="text" name="username" ngModel/>
+            </mat-form-field>
+            
+            <!-- <span class="material-icons-round inline marginless">
+                person
+            </span> -->
+            <!-- <span >
+                <img src='assets/image/person-icon.svg' width="25px"/>
+            </span> -->
+            <!-- <input type="text" name="username" ngModel/> -->
+            
+        </div>
+
+        <div class="input-label">
+            PASSWORD
+        </div>
+        <div class="input-field">
+            
+            <mat-form-field>
+                <mat-icon>lock_rounded</mat-icon>
+                <!-- <mat-label>dsds</mat-label> -->
+                <input matInput type="password" name="password" ngModel/>
+            </mat-form-field>
+        </div>
+        <!-- <div class="forgot-text">
+            Forgot your password?
+        </div> -->
+        <button mat-raised-button type="submit">
+            Sign In
+        </button>
+    </form>
+</div>
+
+<ngx-loading [show]="loading"></ngx-loading>
+

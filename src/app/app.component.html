@@ -1,0 +1,5 @@
+<app-main-nav *ngIf="this.authenticationToken != '' && this.authenticationToken != null">
+    <router-outlet></router-outlet>
+</app-main-nav>
+
+<router-outlet *ngIf="this.authenticationToken == '' || this.authenticationToken == null"></router-outlet>
